@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#24466f"/><stop offset="100%" stop-color="#ff8a4c"/>
+      <stop offset="0%" stop-color="#24466f"/><stop offset="100%" stop-color="#3a5a50"/>
     </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#24466f" stroke="none"/>
+    </marker>
   </defs>
   <rect width="800" height="560" fill="#f7f2e9"/>
   <g stroke="#24466f" stroke-opacity="0.06" stroke-width="1">
@@ -14,41 +17,47 @@
     <line x1="500" y1="0" x2="500" y2="560"/><line x1="600" y1="0" x2="600" y2="560"/>
     <line x1="700" y1="0" x2="700" y2="560"/>
   </g>
-  <text x="400" y="70" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#2b3138">HR 招聘流程 AI 助手</text>
-  <text x="400" y="98" text-anchor="middle" font-family="Arial" font-size="15" fill="#5b6472">qwen-max · LangChain · 结构化打分</text>
-  <g font-family="Arial" font-size="14" text-anchor="middle">
-    <rect x="70" y="180" width="190" height="80" rx="12" fill="#ffffff" stroke="#24466f" stroke-opacity="0.4"/>
-    <text x="165" y="216" fill="#2b3138">简历解析</text>
-    <text x="165" y="238" fill="#5b6472" font-size="12">技能 / 年限 / 项目</text>
-    <rect x="305" y="180" width="190" height="80" rx="12" fill="url(#g)"/>
-    <text x="400" y="216" fill="#ffffff">分维度打分</text>
-    <text x="400" y="238" fill="#f2ede4" font-size="12">技能 / 经验 / 教育</text>
-    <rect x="540" y="180" width="190" height="80" rx="12" fill="#ffffff" stroke="#24466f" stroke-opacity="0.4"/>
-    <text x="635" y="216" fill="#2b3138">面试题生成</text>
-    <text x="635" y="238" fill="#5b6472" font-size="12">基于短板针对性提问</text>
+  <text x="400" y="70" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#2b3138">智能招聘面试系统</text>
+  <text x="400" y="98" text-anchor="middle" font-family="Arial" font-size="15" fill="#5b6472">FastAPI · DeepSeek · Whisper · reportlab · Vue3</text>
+  <!-- 主流程 -->
+  <g font-family="Arial" font-size="13" text-anchor="middle">
+    <rect x="70" y="160" width="150" height="70" rx="12" fill="#ffffff" stroke="#24466f" stroke-opacity="0.4"/>
+    <text x="145" y="188" fill="#24466f">HR 创建面试</text>
+    <text x="145" y="208" fill="#5b6472" font-size="11">岗位 + 简历</text>
+    <rect x="260" y="160" width="150" height="70" rx="12" fill="#ffffff" stroke="#24466f" stroke-opacity="0.4"/>
+    <text x="335" y="188" fill="#24466f">AI 自动出题</text>
+    <text x="335" y="208" fill="#5b6472" font-size="11">结构化 JSON</text>
+    <rect x="450" y="160" width="150" height="70" rx="12" fill="url(#g)"/>
+    <text x="525" y="188" fill="#ffffff">候选人作答</text>
+    <text x="525" y="208" fill="#dfe6ee" font-size="11">语音 + TTS</text>
+    <rect x="640" y="160" width="100" height="70" rx="12" fill="#ffffff" stroke="#24466f" stroke-opacity="0.4"/>
+    <text x="690" y="188" fill="#24466f">评估报告</text>
+    <text x="690" y="208" fill="#5b6472" font-size="11">PDF</text>
   </g>
   <g stroke="#24466f" stroke-opacity="0.6" stroke-width="2" fill="none">
-    <path d="M260 220 H303" marker-end="url(#arr4)"/>
-    <path d="M495 220 H538" marker-end="url(#arr4)"/>
+    <path d="M220 195 H258"/><path d="M410 195 H448"/><path d="M600 195 H638"/>
   </g>
-  <defs>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#24466f" stroke="none"/>
-    </marker>
-  </defs>
-  <!-- 打分条 -->
-  <g font-family="Arial" font-size="13">
-    <text x="120" y="330" fill="#5b6472">技能匹配</text>
-    <rect x="220" y="318" width="360" height="14" rx="7" fill="#e8e4da" stroke="#24466f" stroke-opacity="0.2"/>
-    <rect x="220" y="318" width="300" height="14" rx="7" fill="#24466f"/>
-    <text x="600" y="330" fill="#24466f" font-family="monospace">83%</text>
-    <text x="120" y="370" fill="#5b6472">经验年限</text>
-    <rect x="220" y="358" width="360" height="14" rx="7" fill="#e8e4da" stroke="#24466f" stroke-opacity="0.2"/>
-    <rect x="220" y="358" width="270" height="14" rx="7" fill="#3a5a50"/>
-    <text x="600" y="370" fill="#24466f" font-family="monospace">75%</text>
-    <text x="120" y="410" fill="#5b6472">教育背景</text>
-    <rect x="220" y="398" width="360" height="14" rx="7" fill="#e8e4da" stroke="#24466f" stroke-opacity="0.2"/>
-    <rect x="220" y="398" width="200" height="14" rx="7" fill="#ff8a4c"/>
-    <text x="600" y="410" fill="#24466f" font-family="monospace">55%</text>
+  <!-- 语音识别与纠错 -->
+  <g font-family="Arial" font-size="13" text-anchor="middle">
+    <rect x="120" y="280" width="170" height="66" rx="10" fill="#ffffff" stroke="#ff8a4c" stroke-opacity="0.6"/>
+    <text x="205" y="306" fill="#24466f">Whisper 本地识别</text>
+    <text x="205" y="326" fill="#5b6472" font-size="11">MediaRecorder 录音</text>
+    <rect x="320" y="280" width="170" height="66" rx="10" fill="#ffffff" stroke="#ff8a4c" stroke-opacity="0.6"/>
+    <text x="405" y="306" fill="#24466f">LLM 语义纠错</text>
+    <text x="405" y="326" fill="#5b6472" font-size="11">只纠错不改写</text>
+    <rect x="520" y="280" width="160" height="66" rx="10" fill="#ffffff" stroke="#ff8a4c" stroke-opacity="0.6"/>
+    <text x="600" y="306" fill="#24466f">三存可回溯</text>
+    <text x="600" y="326" fill="#5b6472" font-size="11">音频/转录/纠错</text>
+  </g>
+  <g font-family="Arial" font-size="13" text-anchor="middle">
+    <rect x="90" y="390" width="200" height="60" rx="10" fill="#ffffff" stroke="#ff8a4c" stroke-opacity="0.6"/>
+    <text x="190" y="414" fill="#24466f">状态机驱动</text>
+    <text x="190" y="434" fill="#5b6472" font-size="11">0 未开始 → 4 报告生成</text>
+    <rect x="330" y="390" width="200" height="60" rx="10" fill="#ffffff" stroke="#ff8a4c" stroke-opacity="0.6"/>
+    <text x="430" y="414" fill="#24466f">健壮性降级</text>
+    <text x="430" y="434" fill="#5b6472" font-size="11">识别失败回退原文</text>
+    <rect x="570" y="390" width="140" height="60" rx="10" fill="#ffffff" stroke="#ff8a4c" stroke-opacity="0.6"/>
+    <text x="640" y="414" fill="#24466f">多模态</text>
+    <text x="640" y="434" fill="#5b6472" font-size="11">文本 + 语音</text>
   </g>
 </svg>
